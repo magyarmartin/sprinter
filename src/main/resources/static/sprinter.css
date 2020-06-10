@@ -1,0 +1,19 @@
+.flex-center {
+    display: flex; 
+    justify-content: center;
+}
+
+.chart-container {
+    position: relative;
+}
+
+.main-chart {
+    height:30vh;
+    width:80vw
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+  }
