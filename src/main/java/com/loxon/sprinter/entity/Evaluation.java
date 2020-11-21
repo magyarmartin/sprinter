@@ -34,13 +34,19 @@ public class Evaluation {
 
     private int fun;
 
-    @Column(name = "sustained_value")
-    private int sustainedValue;
+    @Column(name = "health_of_codebase")
+    private int healthOfCodebase;
 
     private int teamwork;
 
     @Column(name = "connection_to_mission")
     private int connectionToMission;
+
+    private int learning;
+
+    private int control;
+
+    private int coordination;
 
     private boolean deleted;
 

@@ -7,6 +7,7 @@ import com.loxon.sprinter.repository.EvaluationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -35,6 +36,7 @@ public class EvaluationService {
         if ( evaluation.getComment() == null || evaluation.getComment().isEmpty() ) {
             evaluation.setComment(null);
         }
+        evaluation.setCreated(new Date());
         evaluation.setDeleted(false);
         repository.save(evaluation);
     }

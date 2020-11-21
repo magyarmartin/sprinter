@@ -12,9 +12,12 @@ public class EvaluationDto {
         deliveringValue = new EvaluationValue();
         easyToRelease = new EvaluationValue();
         fun = new EvaluationValue();
-        sustainedValue = new EvaluationValue();
+        healthOfCodebase = new EvaluationValue();
         teamwork = new EvaluationValue();
         connectionToMission = new EvaluationValue();
+        control = new EvaluationValue();
+        learning = new EvaluationValue();
+        coordination = new EvaluationValue();
         comments = new ArrayList<>();
     }
 
@@ -26,11 +29,17 @@ public class EvaluationDto {
 
     private EvaluationValue fun;
 
-    private EvaluationValue sustainedValue;
+    private EvaluationValue healthOfCodebase;
 
     private EvaluationValue teamwork;
 
     private EvaluationValue connectionToMission;
+
+    private EvaluationValue learning;
+
+    private EvaluationValue control;
+
+    private EvaluationValue coordination;
 
     private List<String> comments;
 

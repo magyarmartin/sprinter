@@ -13,13 +13,16 @@ $( "#evaluation-form" ).submit(function( event ) {
 
     let values = {};
 
-        values.deliveringValue = getNumericValue($inputs[0].value);
-        values.easyToRelease = getNumericValue($inputs[1].value);
-        values.fun = getNumericValue($inputs[2].value);
-        values.sustainedValue = getNumericValue($inputs[3].value);
-        values.teamwork = getNumericValue($inputs[4].value);
+        values.deliveringValue     = getNumericValue($inputs[0].value);
+        values.easyToRelease       = getNumericValue($inputs[1].value);
+        values.fun                 = getNumericValue($inputs[2].value);
+        values.healthOfCodebase    = getNumericValue($inputs[3].value);
+        values.teamwork            = getNumericValue($inputs[4].value);
         values.connectionToMission = getNumericValue($inputs[5].value);
-        values.comment = $inputs[6].value;
+        values.learning            = getNumericValue($inputs[6].value);
+        values.control             = getNumericValue($inputs[7].value);
+        values.coordination        = getNumericValue($inputs[8].value);
+        values.comment             = $inputs[9].value;
 
     getSprintNumber().then(response => {
         return response.json();
@@ -68,7 +71,7 @@ function getSprintNumber() {
 
 function submitEvaluation(data = {}) {
     // Default options are marked with *
-    fetch("http://${host}:${port}/evaluation", {
+    fetch(`http://${host}:${port}/evaluation`, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -84,7 +87,7 @@ function submitEvaluation(data = {}) {
 
 function resetSprint(data = {}) {
     // Default options are marked with *
-    return fetch("http://${host}:${port}/sprint/reset", {
+    return fetch(`http://${host}:${port}/sprint/reset`, {
         method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -100,7 +103,7 @@ function resetSprint(data = {}) {
 
 function startNewSprint(data = {}) {
     // Default options are marked with *
-    return fetch("http://${host}:${port}/sprint/new", {
+    return fetch(`http://${host}:${port}/sprint/new`, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

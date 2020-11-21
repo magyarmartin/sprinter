@@ -15,12 +15,12 @@ class SprinterApplicationTests {
 
     @Test
     void contextLoads() {
-        Evaluation evaluation = new Evaluation();
-        evaluation.setSprintNumber(2);
-        evaluation.setComment("adsads");
-        service.saveSingleEvaluation(evaluation);
-        EvaluationDto e = service.getSprintEvaluation(2);
-        System.out.println(e.getComments().get(0));
+//        Evaluation evaluation = new Evaluation();
+//        evaluation.setSprintNumber(2);
+//        evaluation.setComment("adsads");
+//        service.saveSingleEvaluation(evaluation);
+//        EvaluationDto e = service.getSprintEvaluation(2);
+//        System.out.println(e.getComments().get(0));
     }
 
 }

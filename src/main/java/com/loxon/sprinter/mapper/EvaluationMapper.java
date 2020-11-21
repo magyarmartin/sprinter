@@ -16,8 +16,11 @@ public class EvaluationMapper {
             evaluationDto.getEasyToRelease().addValue(evaluation.getEasyToRelease());
             evaluationDto.getFun().addValue(evaluation.getFun());
             evaluationDto.getConnectionToMission().addValue(evaluation.getConnectionToMission());
-            evaluationDto.getSustainedValue().addValue(evaluation.getSustainedValue());
+            evaluationDto.getHealthOfCodebase().addValue(evaluation.getHealthOfCodebase());
             evaluationDto.getTeamwork().addValue(evaluation.getTeamwork());
+            evaluationDto.getLearning().addValue(evaluation.getLearning());
+            evaluationDto.getControl().addValue(evaluation.getControl());
+            evaluationDto.getCoordination().addValue(evaluation.getCoordination());
             if ( evaluation.getComment() != null ) {
                 evaluationDto.getComments().add(evaluation.getComment());
             }
